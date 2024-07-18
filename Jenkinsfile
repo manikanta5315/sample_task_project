@@ -26,7 +26,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'manikanta5315-dockerhub', passwordVariable: 'password', usernameVariable: 'username')]) {
                     bat 'echo %password% |docker login -u %username% -p %password%'
-                    bat 'docker push -u manikanta5315/projectnew'
+                    bat 'docker push  manikanta5315/projectnew'
                 }
             }
 
