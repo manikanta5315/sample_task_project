@@ -17,7 +17,7 @@ pipeline {
         stage('run test') {
             steps{
             bat '''
-            docker run -d --name projectcontainer -p 8069:80 projectimage1
+            docker run -d --name projectcontainer1 -p 8070:80 projectimage1
             docker tag projectimage1 manikanta5315/projectnew
             '''
             }
