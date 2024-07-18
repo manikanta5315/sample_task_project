@@ -5,7 +5,8 @@ pipeline {
             steps {
                 git branch: 'master' , url:'https://github.com/manikanta5315/sample_task_project.git'
             }
-        stage('build image') {
+        }
+        stage('building image') {
             steps {
                 bat '''
                 docker build -t projectimage1 .
